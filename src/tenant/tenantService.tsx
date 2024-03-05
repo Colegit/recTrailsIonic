@@ -22,6 +22,7 @@ const tenantConfig = {
       longitude: -122.7819,
       latitudeDelta: 0.2,
       longitudeDelta: 0.2,
+      zoom: 11,
     },
     assets: {
       splashLogo: "./assets/princeGeorge/splashLogo.png",
@@ -47,6 +48,7 @@ const tenantConfig = {
       longitude: -123.094989,
       latitudeDelta: 0.0922,
       longitudeDelta: 0.0421,
+      zoom: 11,
     },
     assets: {
       splashLogo: "./assets/mackenzie/splashLogo.png",

@@ -8,8 +8,23 @@ import {
 } from "@ionic/react";
 import { tenant } from "../tenant/tenantService";
 import { personCircle, locateOutline } from "ionicons/icons";
+import { Geolocation } from "@capacitor/geolocation";
+import { useState } from "react";
 
 const HeaderToolbar: React.FC = () => {
+  /**
+   * Grabs the users device current location on the map.
+   * If device doesnt have location services, prompt to turn it on
+   */
+  const getCurrentLocation = async () => {
+    const coordinates = await Geolocation.getCurrentPosition();
+
+    const lat = coordinates.coords.latitude;
+    const long = coordinates.coords.longitude;
+    const heading = coordinates.coords.heading;
+
+    console.log(lat, long, heading);
+  };
   return (
     <IonToolbar
       color={tenant.theme.primaryColor}
@@ -26,7 +41,7 @@ const HeaderToolbar: React.FC = () => {
         {/* <IonButton>
           <IonIcon slot="icon-only" icon={personCircle}></IonIcon>
         </IonButton> */}
-        <IonButton>
+        <IonButton onClick={getCurrentLocation}>
           <IonIcon
             style={{ color: tenant.theme.headerTextColor }}
             slot="icon-only"

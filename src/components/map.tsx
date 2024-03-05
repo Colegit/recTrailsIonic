@@ -19,14 +19,9 @@ const Map: React.FC<mapProps> = () => {
         //style={{ height: "400px", width: "100%" }}
       >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-        <Marker position={[51.505, -0.09]}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
       </MapContainer>
       <IonFab slot="fixed" vertical="bottom" horizontal="end">
-        <IonFabButton color="secondary">
+        <IonFabButton color="primary">
           <IonIcon icon={mapOutline}></IonIcon>
         </IonFabButton>
       </IonFab>

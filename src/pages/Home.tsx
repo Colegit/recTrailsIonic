@@ -9,19 +9,13 @@ import Map from "../components/map";
 import "./Home.css";
 import { tenant } from "../tenant/tenantService";
 import "leaflet/dist/leaflet.css";
+import HeaderToolbar from "../components/headerToolbar";
 
 const Home: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar
-          color={tenant.theme.primaryColor}
-          style={{ backgroundColor: tenant.theme.primaryColor }}
-        >
-          <IonTitle style={{ color: tenant.theme.headerTextColor }}>
-            {tenant.appBarTitle}
-          </IonTitle>
-        </IonToolbar>
+        <HeaderToolbar />
       </IonHeader>
       <IonContent>
         <Map />

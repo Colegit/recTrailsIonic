@@ -1,0 +1,7 @@
+{
+  "name": "recTrails",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}

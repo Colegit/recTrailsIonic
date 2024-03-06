@@ -24,7 +24,7 @@ const SideMenu: React.FC = () => {
     <IonMenu contentId="main-content">
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Details</IonTitle>
+          <IonTitle>Menu</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
